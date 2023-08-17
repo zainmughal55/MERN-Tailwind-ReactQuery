@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 
 function Notes() {
   const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/notes`;
+  
   const { isLoading, error, data } = useQuery("fetchNotes", async () => {
     const res = await fetch(baseUrl);
     return res.json();
