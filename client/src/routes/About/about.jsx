@@ -1,7 +1,7 @@
 function About() {
   return (
     <>
-      <p className="flex items-center gap-5 text-justify font-semibold text-slate-700 text-sm">
+      <p className="flex flex-col lg:flex-row items-center gap-5 text-justify font-semibold text-slate-700 text-sm">
         <img
           className="rounded-full"
           src="https://media.licdn.com/dms/image/D4D03AQE9IerbP50Ogg/profile-displayphoto-shrink_200_200/0/1675583196931?e=1696464000&v=beta&t=UZ7oqrzr0XNyHTGJbQrUnCpzwXwdTrUBJZnbBCvgmbo"
