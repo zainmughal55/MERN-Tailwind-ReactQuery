@@ -4,7 +4,7 @@ import EditSvg from "./../../assets/icons/edit.svg";
 import DeleteSvg from "./../../assets/icons/delete.svg";
 import EyeSvg from "./../../assets/icons/eye.svg";
 
-function Card({ _id, title, description }) {
+function Card({ _id, title, description, setRefetch, mutateAsync }) {
   return (
     <div className="bg-slate-200 rounded-3xl p-5 flex flex-col gap-2">
       <div className="w-fit flex items-center gap-1 ml-auto">
@@ -14,6 +14,11 @@ function Card({ _id, title, description }) {
           className="h-4 w-4 flex-no-shrink fill-current"
         />
         <img
+          onClick={() => {
+            mutateAsync(_id).then(() => {
+              setRefetch((prev) => !prev);
+            });
+          }}
           src={DeleteSvg}
           alt="delete btn"
           className="h-4 w-4 flex-no-shrink fill-current"
@@ -38,6 +43,8 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   _id: PropTypes.string.isRequired,
+  setRefetch: PropTypes.func,
+  mutateAsync: PropTypes.func,
 };
 
 export default Card;
