@@ -21,18 +21,20 @@ export default function Note() {
 
   return (
     <>
-      <div className="space-y-3">
-        <div className=" flex items-center justify-between">
-          <h2 className="font-semibold text-lg">{data.title}</h2>
-          <Link
-            className="hover:bg-orange-500 hover:text-white border-2 border-orange-600 py-1 px-4 rounded-3xl transition-all"
-            to=".."
-          >
-            Back
-          </Link>
+      {data && (
+        <div className="space-y-3">
+          <div className=" flex items-center justify-between">
+            <h2 className="font-semibold text-lg">{data.title}</h2>
+            <Link
+              className="hover:bg-orange-500 hover:text-white border-2 border-orange-600 py-1 px-4 rounded-3xl transition-all"
+              to=".."
+            >
+              Back
+            </Link>
+          </div>
+          <p className="text-base text-justify">{data.description}</p>
         </div>
-        <p className="text-base text-justify">{data.description}</p>
-      </div>
+      )}
     </>
   );
 }
