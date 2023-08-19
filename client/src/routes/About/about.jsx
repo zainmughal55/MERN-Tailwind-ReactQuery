@@ -12,8 +12,8 @@ function About() {
         communication. Experienced Developer with a demonstrated history of
         working in the computer software industry. Skilled in JavaScript,
         Typescript, Frameworks and Node.js. Strong engineering professional with
-        a Bachelor's in Software Engineering focused in Computer Programming
-        from City University of Science and Information Technology.
+        a Bachelor&apos;s in Software Engineering focused in Computer
+        Programming from City University of Science and Information Technology.
         <br />
         <br />
         Contact Info: <br /> email: zainmughalkpk@gmail.com <br />
